@@ -32,7 +32,9 @@ def script_step(compound, edge_element, x, y, scan_name, num_scans):
     return commands
 
 script_filename = first_argument + "_motor_script.txt"
-script_file = open(script_filename, 'w')
+
+script_file = open(script_filename, 'wb')
+# Write in binary mode so that \n does not become \r\n on Windows.
 
 script_beginning = "set plot nowait\nset header off\n\n"
 
