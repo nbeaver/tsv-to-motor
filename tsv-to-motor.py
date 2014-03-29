@@ -22,11 +22,12 @@ def get_datafilename(compound, edge_element):
             return datafilename
     raise RunTimeError("Could not find a suitable datafilename for "+compound+" at edge "+edge_element)
 
-def script_step(compound, edge_element, x, y, scan_name, num_scans):
+def script_step(compound, edge_element, x, y, z, scan_name, num_scans):
     # We assume that x and y are passed as strings,
     # not actual floating point numbers
     assert(type(x) == str)
     assert(type(y) == str)
+    assert(type(z) == str)
     assert(num_scans > 0)
     commands = ""
 
@@ -34,6 +35,7 @@ def script_step(compound, edge_element, x, y, scan_name, num_scans):
     # DONE: make the .00x avoid clobbering existing files
     commands += "mabs smx "+x+"\n"
     commands += "mabs smy "+y+"\n"
+    commands += "mabs smy "+z+"\n"
     for _ in range(int(num_scans)):
         # If the beam goes down, we need to reopen the shutters
         commands += "op a\n"
@@ -60,11 +62,11 @@ with open(first_argument) as tsvfile:
     rows = csv.reader(tsvfile, delimiter='\t')
     for i, row in enumerate(rows):
         if i == 0:
-            pass
+            pass # Ignore column name header.
         else:
-            compound, edge_element, x, y, scan_name, num_scans, comment = row
+            compound, edge_element, x, y, z, scan_name, num_scans, comment = row
             print compound, "at", edge_element, "edge:",\
-            num_scans, "scans of type", scan_name, "at position", x + "," + y
-            script_file.write(script_step(compound, edge_element, x, y, scan_name, num_scans))
+            num_scans, "scans of type", scan_name, "at position", x + "," + y + "," + z
+            script_file.write(script_step(compound, edge_element, x, y, z, scan_name, num_scans))
     script_file.write(script_end)
     script_file.close()

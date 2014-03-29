@@ -1,4 +1,5 @@
 DONE: Make sure it is \n, not \r\n
 DONE: Increment .00x to avoid overwriting files
+DONE: Add z-coordinate
 Add verbose flag?
 Add comments at each step? (use #)

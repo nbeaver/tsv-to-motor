@@ -1,9 +1,9 @@
-compound	edge	x-position	y-position	scan name	scans	comment
-Li2C2Te	Te	7500	-51718.5	xafs	2	Glass capillary
-K2C2Te	Te	7500	-41092.5	xafs	2	Glass capillary
-Na2C2Te	Te	10000	-30570.8	xafs	2	Glass capillary
-CsC2HTe	Te	8900	-19591	xafs	6	Glass capillary
-TeO2	Te	10250	-7826	xafs	2	Powder on Kapton tape
-Li2C2Te_duplicate	Te	15800	10540	xafs	3	Glass capillary
-K2C2Te_duplicate	Te	10600	20400	xafs	3	Glass capillary
-Na2C2Te_duplicate	Te	11300	29375	xafs	3	Glass capillary
+compound	edge	x-position	y-position	z-position	scan name	scans	comment
+Li2C2Te	Te	7500	-51718.5	124000	xafs	2	Glass capillary
+K2C2Te	Te	7500	-41092.5	124000	xafs	2	Glass capillary
+Na2C2Te	Te	10000	-30570.8	124000	xafs	2	Glass capillary
+CsC2HTe	Te	8900	-19591	124000	xafs	6	Glass capillary
+TeO2	Te	10250	-7826	124000	xafs	2	Powder on Kapton tape
+Li2C2Te_duplicate	Te	15800	10540	124000	xafs	3	Glass capillary
+K2C2Te_duplicate	Te	10600	20400	124000	xafs	3	Glass capillary
+Na2C2Te_duplicate	Te	11300	29375	124000	xafs	3	Glass capillary
