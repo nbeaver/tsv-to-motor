@@ -10,6 +10,18 @@ if first_argument == "":
     print "Usage: python tsv-to-motor.py source.tsv"
     exit
 
+def get_datafilename(compound, edge_element):
+    import os.path
+    for i in range(1,1000):
+        file_extension = str(i).zfill(3) # Pad it with leading zeros, 001 to 999
+        datafilename = edge_element+"_"+compound+"."+file_extension
+        if os.path.isfile(datafilename):
+            print datafilename, "already exists."
+            pass
+        else:
+            return datafilename
+    raise RunTimeError("Could not find a suitable datafilename for "+compound+" at edge "+edge_element)
+
 def script_step(compound, edge_element, x, y, scan_name, num_scans):
     # We assume that x and y are passed as strings,
     # not actual floating point numbers
@@ -17,8 +29,9 @@ def script_step(compound, edge_element, x, y, scan_name, num_scans):
     assert(type(y) == str)
     assert(num_scans > 0)
     commands = ""
-    commands += "set field xafs.datafile_name "+edge_element+"_"+compound+".001\n"
-    # TODO: make the .00x avoid clobbering existing files
+
+    commands += "set field xafs.datafile_name " + get_datafilename(compound, edge_element) + "\n"
+    # DONE: make the .00x avoid clobbering existing files
     commands += "mabs smx "+x+"\n"
     commands += "mabs smy "+y+"\n"
     for _ in range(int(num_scans)):
