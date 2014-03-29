@@ -1,0 +1,106 @@
+set plot nowait
+set header off
+
+set field xafs.datafile_name Te_Li2C2Te.004
+mabs smx 7500
+mabs smy -51718.5
+op a 
+op b
+scan xafs
+op a 
+op b
+scan xafs
+
+set field xafs.datafile_name Te_K2C2Te.001
+mabs smx 7500
+mabs smy -41092.5
+op a 
+op b
+scan xafs
+op a 
+op b
+scan xafs
+
+set field xafs.datafile_name Te_Na2C2Te.001
+mabs smx 10000
+mabs smy -30570.8
+op a 
+op b
+scan xafs
+op a
+op b
+scan xafs
+
+set field xafs.datafile_name Te_CsC2HTe.001
+mabs smx 8900
+mabs smy -19591
+op a 
+op b
+scan xafs
+op a 
+op b
+scan xafs
+op a 
+op b
+scan xafs
+op a
+op b
+scan xafs
+op a 
+op b
+scan xafs
+op a 
+op b
+scan xafs
+
+set field xafs.datafile_name Te_TeO2.001
+mabs smx 10250
+mabs smy -7826
+op a 
+op b
+scan xafs
+op a 
+op b
+scan xafs
+
+set field xafs.datafile_name Te_Li2C2Te_duplicate.001
+mabs smx 15800
+mabs smy 10540
+op a 
+op b
+scan xafs
+op a
+op b
+scan xafs
+op a
+op b
+scan xafs
+
+set field xafs.datafile_name Te_K2C2Te_duplicate.001
+mabs smx 10600
+mabs smy 20400
+op a 
+op b
+scan xafs
+op a
+op b
+scan xafs
+op a
+op b
+scan xafs
+
+set field xafs.datafile_name Te_Na2C2Te_duplicate.001
+mabs smx 11300
+mabs smy 29375
+op a 
+op b
+scan xafs
+op a
+op b
+scan xafs
+op a
+op b
+scan xafs
+
+set plot on
+set header on
