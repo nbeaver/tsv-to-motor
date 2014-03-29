@@ -35,7 +35,7 @@ def script_step(compound, edge_element, x, y, z, scan_name, num_scans):
     # DONE: make the .00x avoid clobbering existing files
     commands += "mabs smx "+x+"\n"
     commands += "mabs smy "+y+"\n"
-    commands += "mabs smy "+z+"\n"
+    commands += "mabs smz "+z+"\n"
     for _ in range(int(num_scans)):
         # If the beam goes down, we need to reopen the shutters
         commands += "op a\n"
@@ -53,7 +53,7 @@ script_file = open(script_filename, 'wb')
 
 script_beginning = "set plot nowait\nset header off\n\n"
 
-script_end ="set plot on\nset header on"
+script_end ="set plot on\nset header on\n"
 
 script_file.write(script_beginning)
 
