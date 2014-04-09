@@ -3,3 +3,8 @@ DONE: Increment .00x to avoid overwriting files
 DONE: Add z-coordinate
 Add verbose flag?
 Add comments at each step? (use #)
+Add headers like this:
+set var sff_header1 "Mn edge (Zn.49Cd0.51)0.9Mn0.1S"
+Add datafilename like this:
+set field zn_xafs.datafile_name Zn_AH_278.001
+Add slit sizes somehow?
