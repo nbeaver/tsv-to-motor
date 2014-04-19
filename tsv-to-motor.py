@@ -2,13 +2,17 @@
 
 import sys
 
+if len(sys.argv) < 2:
+    print "Usage: python tsv-to-motor.py source.tsv"
+    exit(1)
+
 script_name = sys.argv[0]
 first_argument = sys.argv[1]
 all_arguments = ''.join(sys.argv[1:])
 
 if first_argument == "":
     print "Usage: python tsv-to-motor.py source.tsv"
-    exit
+    exit(1)
 
 def get_datafilename(compound, edge_element):
     import os.path

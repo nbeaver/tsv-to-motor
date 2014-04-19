@@ -1,3 +1,4 @@
+DONE: check to see if it exits properly with no arguments
 DONE: Make sure it is \n, not \r\n
 DONE: Increment .00x to avoid overwriting files
 DONE: Add z-coordinate
