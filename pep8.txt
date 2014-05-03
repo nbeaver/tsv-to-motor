@@ -1,13 +1,4 @@
-tsv-to-motor.py:17:1: E302 expected 2 blank lines, found 1
-tsv-to-motor.py:19:21: E231 missing whitespace after ','
-tsv-to-motor.py:20:41: E261 at least two spaces before inline comment
-tsv-to-motor.py:20:80: E501 line too long (80 > 79 characters)
-tsv-to-motor.py:27:80: E501 line too long (103 > 79 characters)
-tsv-to-motor.py:29:1: E302 expected 2 blank lines, found 1
-tsv-to-motor.py:38:80: E501 line too long (97 > 79 characters)
-tsv-to-motor.py:60:13: E225 missing whitespace around operator
-tsv-to-motor.py:69:17: E261 at least two spaces before inline comment
-tsv-to-motor.py:71:80: E501 line too long (80 > 79 characters)
-tsv-to-motor.py:73:13: E122 continuation line missing indentation or outdented
-tsv-to-motor.py:73:80: E501 line too long (87 > 79 characters)
-tsv-to-motor.py:74:80: E501 line too long (97 > 79 characters)
+tsv-to-motor.py:29:80: E501 line too long (103 > 79 characters)
+tsv-to-motor.py:41:80: E501 line too long (97 > 79 characters)
+tsv-to-motor.py:75:80: E501 line too long (80 > 79 characters)
+tsv-to-motor.py:79:80: E501 line too long (97 > 79 characters)
