@@ -16,6 +16,7 @@ if first_argument == "":
 
 
 def get_datafilename(compound, edge_element):
+    """ Return the datafilename to use without clobbering an existing one. """
     import os.path
     for i in range(1, 1000):
         # Pad file extension with leading zeros, 001 to 999
@@ -23,19 +24,19 @@ def get_datafilename(compound, edge_element):
         datafilename = edge_element+"_"+compound+"."+file_extension
         if os.path.isfile(datafilename):
             print datafilename, "already exists."
-            pass
         else:
             return datafilename
     raise RunTimeError("Could not find a suitable datafilename for "+compound+" at edge "+edge_element)
 
 
 def script_step(compound, edge_element, x, y, z, scan_name, num_scans):
+    """ Returns a single step of the motor script """
     # We assume that x and y are passed as strings,
     # not actual floating point numbers
-    assert(type(x) == str)
-    assert(type(y) == str)
-    assert(type(z) == str)
-    assert(num_scans > 0)
+    assert type(x) == str
+    assert type(y) == str
+    assert type(z) == str
+    assert num_scans > 0
     commands = ""
 
     commands += "set field xafs.datafile_name " + get_datafilename(compound, edge_element) + "\n"
@@ -75,7 +76,7 @@ with open(first_argument) as tsvfile:
             compound, edge_element, x, y, z, scan_name, num_scans, comment = row
             print (compound, "at", edge_element, "edge:",
                    num_scans, "scans of type", scan_name,
-                   "at position", x + "," + y + "," + z  )
+                   "at position", x + "," + y + "," + z)
             script_file.write(script_step(compound, edge_element, x, y, z, scan_name, num_scans))
 
 script_file.write(script_end)

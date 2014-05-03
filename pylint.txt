@@ -1,51 +1,37 @@
 ************* Module tsv-to-motor
-C: 19, 0: Exactly one space required after comma
-    for i in range(1,1000):
-                    ^ (bad-whitespace)
-C: 27, 0: Line too long (103/80) (line-too-long)
-C: 32, 0: Unnecessary parens after 'assert' keyword (superfluous-parens)
-C: 33, 0: Unnecessary parens after 'assert' keyword (superfluous-parens)
-C: 34, 0: Unnecessary parens after 'assert' keyword (superfluous-parens)
-C: 35, 0: Unnecessary parens after 'assert' keyword (superfluous-parens)
-C: 38, 0: Line too long (97/80) (line-too-long)
-C: 60, 0: Exactly one space required after assignment
-script_end ="set plot on\nset header on\n"
-           ^ (bad-whitespace)
-C: 73, 0: Line too long (87/80) (line-too-long)
-C: 74, 0: Line too long (97/80) (line-too-long)
+C: 29, 0: Line too long (103/80) (line-too-long)
+C: 42, 0: Line too long (97/80) (line-too-long)
+C: 80, 0: Line too long (97/80) (line-too-long)
 C:  1, 0: Invalid module name "tsv-to-motor" (invalid-name)
 C:  1, 0: Missing module docstring (missing-docstring)
 C:  9, 0: Invalid constant name "script_name" (invalid-name)
 C: 10, 0: Invalid constant name "first_argument" (invalid-name)
 C: 11, 0: Invalid constant name "all_arguments" (invalid-name)
-W: 19, 8: Redefining name 'i' from outer scope (line 67) (redefined-outer-name)
-W: 17,21: Redefining name 'compound' from outer scope (line 71) (redefined-outer-name)
-W: 17,31: Redefining name 'edge_element' from outer scope (line 71) (redefined-outer-name)
-C: 17, 0: Missing function docstring (missing-docstring)
-W: 24,12: Unnecessary pass statement (unnecessary-pass)
-E: 27,10: Undefined variable 'RunTimeError' (undefined-variable)
-W: 29,49: Redefining name 'scan_name' from outer scope (line 71) (redefined-outer-name)
-W: 29,16: Redefining name 'compound' from outer scope (line 71) (redefined-outer-name)
-W: 29,43: Redefining name 'y' from outer scope (line 71) (redefined-outer-name)
-W: 29,40: Redefining name 'x' from outer scope (line 71) (redefined-outer-name)
-W: 29,46: Redefining name 'z' from outer scope (line 71) (redefined-outer-name)
-W: 29,60: Redefining name 'num_scans' from outer scope (line 71) (redefined-outer-name)
-W: 29,26: Redefining name 'edge_element' from outer scope (line 71) (redefined-outer-name)
-R: 29, 0: Too many arguments (7/5) (too-many-arguments)
-C: 29, 0: Invalid argument name "x" (invalid-name)
-C: 29, 0: Invalid argument name "y" (invalid-name)
-C: 29, 0: Invalid argument name "z" (invalid-name)
-C: 29, 0: Missing function docstring (missing-docstring)
-C: 53, 0: Invalid constant name "script_filename" (invalid-name)
-C: 55, 0: Invalid constant name "script_file" (invalid-name)
-C: 58, 0: Invalid constant name "script_beginning" (invalid-name)
-C: 60, 0: Invalid constant name "script_end" (invalid-name)
-C: 66, 4: Invalid constant name "rows" (invalid-name)
+W: 21, 8: Redefining name 'i' from outer scope (line 71) (redefined-outer-name)
+W: 18,21: Redefining name 'compound' from outer scope (line 76) (redefined-outer-name)
+W: 18,31: Redefining name 'edge_element' from outer scope (line 76) (redefined-outer-name)
+E: 29,10: Undefined variable 'RunTimeError' (undefined-variable)
+W: 32,49: Redefining name 'scan_name' from outer scope (line 76) (redefined-outer-name)
+W: 32,16: Redefining name 'compound' from outer scope (line 76) (redefined-outer-name)
+W: 32,43: Redefining name 'y' from outer scope (line 76) (redefined-outer-name)
+W: 32,40: Redefining name 'x' from outer scope (line 76) (redefined-outer-name)
+W: 32,46: Redefining name 'z' from outer scope (line 76) (redefined-outer-name)
+W: 32,60: Redefining name 'num_scans' from outer scope (line 76) (redefined-outer-name)
+W: 32,26: Redefining name 'edge_element' from outer scope (line 76) (redefined-outer-name)
+R: 32, 0: Too many arguments (7/5) (too-many-arguments)
+C: 32, 0: Invalid argument name "x" (invalid-name)
+C: 32, 0: Invalid argument name "y" (invalid-name)
+C: 32, 0: Invalid argument name "z" (invalid-name)
+C: 57, 0: Invalid constant name "script_filename" (invalid-name)
+C: 59, 0: Invalid constant name "script_file" (invalid-name)
+C: 62, 0: Invalid constant name "script_beginning" (invalid-name)
+C: 64, 0: Invalid constant name "script_end" (invalid-name)
+C: 70, 4: Invalid constant name "rows" (invalid-name)
 
 
 Report
 ======
-53 statements analysed.
+52 statements analysed.
 
 Messages by category
 --------------------
@@ -53,11 +39,11 @@ Messages by category
 +-----------+-------+---------+-----------+
 |type       |number |previous |difference |
 +===========+=======+=========+===========+
-|convention |25     |25       |=          |
+|convention |16     |23       |-7.00      |
 +-----------+-------+---------+-----------+
 |refactor   |1      |1        |=          |
 +-----------+-------+---------+-----------+
-|warning    |11     |11       |=          |
+|warning    |10     |11       |-1.00      |
 +-----------+-------+---------+-----------+
 |error      |1      |1        |=          |
 +-----------+-------+---------+-----------+
@@ -74,26 +60,33 @@ Messages
 +---------------------+------------+
 |redefined-outer-name |10          |
 +---------------------+------------+
-|superfluous-parens   |4           |
-+---------------------+------------+
-|line-too-long        |4           |
-+---------------------+------------+
-|missing-docstring    |3           |
-+---------------------+------------+
-|bad-whitespace       |2           |
-+---------------------+------------+
-|unnecessary-pass     |1           |
+|line-too-long        |3           |
 +---------------------+------------+
 |undefined-variable   |1           |
 +---------------------+------------+
 |too-many-arguments   |1           |
++---------------------+------------+
+|missing-docstring    |1           |
 +---------------------+------------+
 
 
 
 Global evaluation
 -----------------
-Your code has been rated at 2.08/10 (previous run: 2.08/10, +0.00)
+Your code has been rated at 3.85/10 (previous run: 2.45/10, +1.39)
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
 
 Raw metrics
 -----------
@@ -101,13 +94,13 @@ Raw metrics
 +----------+-------+------+---------+-----------+
 |type      |number |%     |previous |difference |
 +==========+=======+======+=========+===========+
-|code      |54     |83.08 |54       |=          |
+|code      |54     |77.14 |54       |=          |
 +----------+-------+------+---------+-----------+
-|docstring |0      |0.00  |0        |=          |
+|docstring |3      |4.29  |1        |+2.00      |
 +----------+-------+------+---------+-----------+
-|comment   |2      |3.08  |2        |=          |
+|comment   |2      |2.86  |2        |=          |
 +----------+-------+------+---------+-----------+
-|empty     |9      |13.85 |9        |=          |
+|empty     |11     |15.71 |12       |-1.00      |
 +----------+-------+------+---------+-----------+
 
 
@@ -124,21 +117,8 @@ Statistics by type
 +---------+-------+-----------+-----------+------------+---------+
 |method   |0      |0          |=          |0           |0        |
 +---------+-------+-----------+-----------+------------+---------+
-|function |2      |2          |=          |0.00        |0.00     |
+|function |2      |2          |=          |100.00      |0.00     |
 +---------+-------+-----------+-----------+------------+---------+
-
-
-
-Duplication
------------
-
-+-------------------------+------+---------+-----------+
-|                         |now   |previous |difference |
-+=========================+======+=========+===========+
-|nb duplicated lines      |0     |0        |=          |
-+-------------------------+------+---------+-----------+
-|percent duplicated lines |0.000 |0.000    |=          |
-+-------------------------+------+---------+-----------+
 
 
 
