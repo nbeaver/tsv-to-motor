@@ -9,3 +9,4 @@ set var sff_header1 "Mn edge (Zn.49Cd0.51)0.9Mn0.1S"
 Add datafilename like this:
 set field zn_xafs.datafile_name Zn_AH_278.001
 Add slit sizes somehow?
+Not all beamlines have the same shutter name. How do we know if it's `op b` or `op a`?
