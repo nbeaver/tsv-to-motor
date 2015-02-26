@@ -39,7 +39,7 @@ def script_step(compound, edge_element, x, y, z, scan_name, num_scans):
     assert num_scans > 0
     commands = ""
 
-    commands += "set field xafs.datafile_name " + get_datafilename(compound, edge_element) + "\n"
+    commands += "set field "+scan_name+".datafile_name " + get_datafilename(compound, edge_element) + "\n"
     # DONE: make the .00x avoid clobbering existing files
     commands += "mabs smx "+x+"\n"
     commands += "mabs smy "+y+"\n"
