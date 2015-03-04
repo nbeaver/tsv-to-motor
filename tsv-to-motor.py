@@ -41,6 +41,8 @@ def script_step(compound, edge_element, x, y, z, scan_name, num_scans):
 
     commands += "set field "+scan_name+".datafile_name " + get_datafilename(compound, edge_element) + "\n"
     # DONE: make the .00x avoid clobbering existing files
+    # TODO: "set var xafs_header1"
+    # TODO: "set field scan_name.num_scans 1", since we are manually repeating anyway.
     commands += "mabs smx "+x+"\n"
     commands += "mabs smy "+y+"\n"
     commands += "mabs smz "+z+"\n"
