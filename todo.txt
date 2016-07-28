@@ -1,7 +1,7 @@
 DONE: check to see if it exits properly with no arguments
 DONE: Make sure it is \n, not \r\n
-DONE: Increment .00x to avoid overwriting files
 DONE: Add z-coordinate
+Increment .00x to avoid overwriting files
 Add verbose flag?
 Add comments at each step? (use #)
 Add headers like this:
@@ -10,3 +10,6 @@ Add datafilename like this:
 set field zn_xafs.datafile_name Zn_AH_278.001
 Add slit sizes somehow?
 Not all beamlines have the same shutter name. How do we know if it's `op b` or `op a`?
+Add caput command in addition to op a/op b
+Add option to collate scans instead of doing them sequentially, so you get at least one scan of each before starting over.
+Ensure that the number of scans is 1
