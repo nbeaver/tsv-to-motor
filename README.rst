@@ -36,3 +36,11 @@ This will produce a file in the current directory called ``input.tsv_motor_scrip
 or::
 
    motor> exec input.tsv_motor_script.txt
+
+-------
+License
+-------
+
+This project is licensed under the terms of the `MIT license`_.
+
+.. _MIT license: LICENSE.txt
